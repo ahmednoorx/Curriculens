@@ -57,7 +57,7 @@ curriculum-assistant
 
 1. Run the Streamlit application:
    ```
-   streamlit run src/app.py
+   streamlit run app.py
    ```
 
 2. Follow the on-screen instructions to use the text generation, parsing, and exporting features.

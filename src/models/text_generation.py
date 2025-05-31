@@ -3,7 +3,7 @@ import requests
 
 class TextGenerator:
     def __init__(self):
-        self.api_key = os.getenv("GROQ_API_Key")
+        self.api_key = os.getenv("GROQ_API_KEY")
         self.api_url = "https://api.groq.com/openai/v1/chat/completions"
         self.model = "llama3-8b-8192"  # You can use other models Groq supports
 

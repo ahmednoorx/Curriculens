@@ -7,7 +7,6 @@ from src.parsers.docx_parser import DOCXParser
 from io import BytesIO
 from fpdf import FPDF
 from docx import Document
-from streamlit_chat import message
 from dotenv import load_dotenv
 import nltk
 from collections import Counter
