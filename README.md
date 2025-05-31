@@ -1,23 +1,13 @@
 ---
-<<<<<<< HEAD
 title: Curriculum Assistant
 emoji: 📚
 colorFrom: blue
 colorTo: green
 sdk: streamlit
-=======
-title: Curriculens
-emoji: 🌖
-colorFrom: red
-colorTo: purple
-sdk: gradio
-sdk_version: 5.32.0
->>>>>>> f4f9f2c04bac250d514c34cdc2c85efb7b26aa34
 app_file: app.py
 pinned: false
 ---
 
-<<<<<<< HEAD
 # Curriculum Assistant
 
 This project is a Curriculum Assistant built with Streamlit that leverages open-source models for text generation and supports PDF/DOCX parsing. It provides functionalities to generate text based on user prompts, parse documents, and export content in various formats.
@@ -79,6 +69,3 @@ Contributions are welcome! Please feel free to submit a pull request or open an 
 ## License
 
 This project is licensed under the MIT License. See the LICENSE file for more details.
-=======
-Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
->>>>>>> f4f9f2c04bac250d514c34cdc2c85efb7b26aa34
