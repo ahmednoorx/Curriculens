@@ -107,17 +107,18 @@ def main():
     st.set_page_config(layout="wide")
     st.title("📚 Curriculum Assistant")
 
-    # Theme toggle
-    theme = st.sidebar.radio("Theme", ["Light", "Dark"], index=0)
-    if theme == "Dark":
-        st.markdown(
-            """
-            <style>
-            body, .stApp { background-color: #222 !important; color: #eee !important; }
-            </style>
-            """,
-            unsafe_allow_html=True,
-        )
+    st.markdown("""
+    ### About Curriculens
+    Curriculens is an AI-powered web application designed to help teachers, students, and educators quickly generate educational materials from PDF or DOCX files. 
+    
+    **Purpose:**
+    - Automatically extract chapters or sections from documents
+    - Generate lesson plans, multiple-choice questions (MCQs), short questions, and summaries for any chapter
+    - Provide an interactive Q&A chatbot (Curriculens) for questions about the uploaded material
+    - Export generated content and chat history for easy use in classrooms or study sessions
+    
+    This tool saves educators and learners time by automating the creation of high-quality, customized teaching and study materials from existing documents, making lesson planning and exam preparation faster and easier.
+    """)
 
     # Sidebar organization with expanders
     with st.sidebar:
@@ -129,8 +130,6 @@ def main():
             3. Explore chapters, generate content, or chat with Curriculens.
             4. Export your results.
             """)
-        with st.expander("Settings", expanded=True):
-            st.radio("Theme", ["Light", "Dark"], index=0, key="theme_radio")
         with st.expander("Reset", expanded=False):
             if st.button("Reset Session"):
                 for key in ["extracted_text", "chapters", "chat_history", "all_generated"]:
