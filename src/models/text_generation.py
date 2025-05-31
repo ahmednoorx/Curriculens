@@ -7,7 +7,10 @@ class TextGenerator:
         self.api_url = "https://api.groq.com/openai/v1/chat/completions"
         self.model = "llama3-8b-8192"  # You can use other models Groq supports
 
-    def generate_text(self, prompt, max_tokens=256):
+    def generate_text(self, prompt, max_tokens=256, task=None):
+        # Use a higher max_tokens for lesson plans
+        if task == "Lesson Plan":
+            max_tokens = 800
         headers = {
             "Authorization": f"Bearer {self.api_key}",
             "Content-Type": "application/json"

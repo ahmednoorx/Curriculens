@@ -216,17 +216,28 @@ def main():
                             prompt = f"Summarize the following content:\n\n{chapter_text[:3000]}"
                             tg = TextGenerator()
                             progress.progress(30)
-                            result = tg.generate_text(prompt)
+                            result = tg.generate_text(prompt, task=task)
+                        elif task == "Lesson Plan":
+                            prompt = (
+                                "Generate a detailed, well-structured lesson plan for the following content. "
+                                "Include: Title, Grade Level, Objectives, Materials, Procedure (with Introduction, Direct Instruction, Guided Practice, Independent Practice, Assessment), and Conclusion. "
+                                "Ensure each section is complete and do not end mid-sentence. Use dashes (-) for lists instead of asterisks (*).\n\n"
+                                f"{chapter_text[:3000]}"
+                            )
+                            tg = TextGenerator()
+                            progress.progress(30)
+                            result = tg.generate_text(prompt, task=task)
+                            # Post-process: replace asterisks with dashes for cleaner formatting
+                            result = result.replace("* ", "- ")
                         else:
                             prompt_map = {
-                                "Lesson Plan": "Create a lesson plan for the following content:",
                                 "MCQs": "Generate multiple choice questions for the following content:",
                                 "Short Questions": "Generate short answer questions for the following content:"
                             }
                             prompt = f"{prompt_map[task]}\n\n{chapter_text[:3000]}"
                             tg = TextGenerator()
                             progress.progress(30)
-                            result = tg.generate_text(prompt)
+                            result = tg.generate_text(prompt, task=task)
                         progress.progress(90)
                         st.text_area("Generated Content", value=result, height=200)
                         st.session_state.all_generated.append(result)
