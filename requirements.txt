@@ -6,3 +6,4 @@ reportlab
 requests
 fpdf
 python-dotenv
+nltk
