@@ -245,13 +245,12 @@ def main():
                 except Exception as e:
                     st.error(f"Error during content generation: {e}")
 
-                # Always show download button after generation
-                all_text = "\n\n".join(st.session_state.all_generated)
+                # Download only the most recent generated content
                 if export_format == "PDF":
-                    if st.download_button("Download PDF", export_to_pdf(all_text), file_name="all_content.pdf"):
+                    if st.download_button("Download PDF", export_to_pdf(result), file_name="generated_content.pdf"):
                         st.success("PDF download started!")
                 else:
-                    if st.download_button("Download Word", export_to_word(all_text), file_name="all_content.docx"):
+                    if st.download_button("Download Word", export_to_word(result), file_name="generated_content.docx"):
                         st.success("Word download started!")
         with col2:
             st.header("🤖 Curriculens")
