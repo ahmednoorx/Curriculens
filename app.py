@@ -118,13 +118,61 @@ def main():
     - Export generated content and chat history for easy use in classrooms or study sessions
     
     This tool saves educators and learners time by automating the creation of high-quality, customized teaching and study materials from existing documents, making lesson planning and exam preparation faster and easier.
+    
+    **🎯 Key Capabilities:**
+    - 📚 **Smart Document Processing**: Automatically detect chapters and structure content
+    - 🤖 **AI Content Generation**: Create lesson plans, assessments, and summaries instantly  
+    - 💬 **Interactive Learning**: Get answers to specific questions about your materials
+    - 📤 **Professional Export**: Download materials as PDF or Word documents
+    - ⚡ **Time-Saving**: Transform hours of work into minutes of guided creation
+    
+    📋 **[View Complete Capabilities Guide](https://github.com/ahmednoorx/Curriculens/blob/main/CAPABILITIES.md)** for detailed features and benefits.
     """)
+
+    # Add expandable capabilities section
+    with st.expander("🔍 What Can I Do For You?", expanded=False):
+        st.markdown("""
+        **For Educators:**
+        - ⏰ Save 90% of lesson planning time with AI-generated structured plans
+        - 📝 Create diverse assessment questions (MCQs, short answers) instantly
+        - 🎯 Generate learning objectives aligned with educational standards
+        - 💡 Get teaching strategies and activity suggestions through the chatbot
+        
+        **For Students:**
+        - 📖 Get instant summaries of complex textbook chapters
+        - ❓ Ask specific questions about study materials and get immediate answers
+        - 📝 Generate practice questions to test your understanding
+        - 🎯 Focus on specific topics with chapter-by-chapter analysis
+        
+        **For Institutions:**
+        - 🏗️ Rapidly develop standardized curriculum materials
+        - 📊 Ensure consistent quality across all educational content
+        - 👥 Support teacher training with AI-assisted content creation
+        - 💰 Reduce curriculum development costs significantly
+        
+        **Quick Example:** Upload a textbook chapter → Get a complete lesson plan, 10 MCQs, summary, and interactive Q&A in under 3 minutes!
+        """)
+    
 
     # Sidebar organization with expanders
     with st.sidebar:
-        with st.expander("Instructions", expanded=True):
+        with st.expander("🚀 Quick Start Guide", expanded=True):
             st.markdown("""
-            **Instructions:**
+            **Get Started in 3 Steps:**
+            1. 📂 **Upload**: Drop your PDF or DOCX file
+            2. 🎯 **Generate**: Choose content type and click generate
+            3. 📤 **Export**: Download your materials
+            
+            **💡 Pro Tips:**
+            - Use "Book" type for textbooks with chapters
+            - Use "Syllabus" type for course outlines
+            - Try the chatbot for specific questions
+            - Export regularly to build your resource library
+            """)
+            
+        with st.expander("📋 Instructions", expanded=False):
+            st.markdown("""
+            **Detailed Instructions:**
             1. Upload a PDF or DOCX file.
             2. Select content type (Syllabus/Book).
             3. Explore chapters, generate content, or chat with Curriculens.
